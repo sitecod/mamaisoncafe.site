@@ -352,6 +352,31 @@ nav a:hover {
 
 
 /* =========================
+   IMAGENS DOS PRODUTOS
+========================= */
+
+.produto-com-imagem {
+    gap: 15px;
+}
+
+.produto-com-imagem img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    flex-shrink: 0;
+    display: block;
+}
+
+.produto-com-imagem .produto-info {
+    flex: 1;
+}
+
+
+/* =========================
    ADICIONAL
 ========================= */
 
@@ -662,6 +687,19 @@ footer small {
         font-size: 12px;
     }
 
+
+    /* IMAGENS NO CELULAR */
+
+    .produto-com-imagem img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .produto-com-imagem {
+        gap: 12px;
+    }
+
+
     .adicional {
         padding: 18px;
     }
@@ -720,6 +758,11 @@ footer small {
 
     .produto strong {
         font-size: 11px;
+    }
+
+    .produto-com-imagem img {
+        width: 65px;
+        height: 65px;
     }
 
 }
