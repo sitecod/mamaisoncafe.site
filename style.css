@@ -1,0 +1,725 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --branco: #ffffff;
+    --bege: #f4eee5;
+    --bege-claro: #faf7f2;
+    --bege-escuro: #d8c8b5;
+    --marrom: #4a3b32;
+    --marrom-claro: #806f60;
+    --dourado: #b89568;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--branco);
+    color: var(--marrom);
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo {
+    min-height: 85px;
+    padding: 15px 7%;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #e8dfd4;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-simbolo {
+    width: 48px;
+    height: 48px;
+
+    border: 2px solid var(--dourado);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+    color: var(--dourado);
+}
+
+.logo h1 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: normal;
+}
+
+.logo span {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: var(--dourado);
+    margin-top: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--marrom);
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--dourado);
+}
+
+.botao-topo {
+    text-decoration: none;
+    color: white;
+    background: var(--marrom);
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.botao-topo:hover {
+    background: var(--dourado);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(
+            rgba(250, 247, 242, 0.85),
+            rgba(255, 255, 255, 0.95)
+        );
+}
+
+.hero-conteudo {
+    max-width: 800px;
+}
+
+.mini-titulo {
+    color: var(--dourado);
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(55px, 9vw, 95px);
+    font-weight: normal;
+    line-height: 0.95;
+}
+
+.hero h2 span {
+    display: block;
+    font-size: 0.55em;
+    letter-spacing: 12px;
+    color: var(--dourado);
+    margin-top: 15px;
+}
+
+.linha-decorativa {
+    margin: 25px 0;
+    color: var(--dourado);
+    font-size: 25px;
+}
+
+.frase {
+    font-size: 26px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.hero-texto {
+    max-width: 550px;
+    margin: 25px auto;
+    color: var(--marrom-claro);
+    line-height: 1.7;
+    font-family: Arial, sans-serif;
+}
+
+.botao-principal {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 30px;
+
+    background: var(--marrom);
+    color: white;
+
+    text-decoration: none;
+    border-radius: 30px;
+
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    background: var(--dourado);
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   EVENTOS
+========================= */
+
+.eventos {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: var(--bege-claro);
+    border: 1px solid var(--bege-escuro);
+}
+
+.decoracao {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.eventos h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.eventos p {
+    color: var(--marrom-claro);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.titulo-secao {
+    text-align: center;
+    padding: 80px 20px 45px;
+}
+
+.titulo-secao span {
+    color: var(--dourado);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.titulo-secao h2 {
+    font-size: 48px;
+    font-weight: normal;
+    margin: 12px 0;
+}
+
+.titulo-secao p {
+    color: var(--marrom-claro);
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.categoria {
+    padding: 70px 8%;
+}
+
+.fundo-bege {
+    background: var(--bege-claro);
+}
+
+.categoria-titulo {
+    max-width: 1000px;
+    margin: 0 auto 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    border-bottom: 1px solid var(--bege-escuro);
+    padding-bottom: 20px;
+}
+
+.categoria-titulo .icone {
+    font-size: 38px;
+}
+
+.categoria-titulo p {
+    color: var(--dourado);
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.categoria-titulo h2 {
+    font-size: 34px;
+    font-weight: normal;
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produtos {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 45px;
+}
+
+.produto {
+    min-height: 95px;
+    padding: 20px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    border-bottom: 1px dashed #d9cec1;
+}
+
+.produto h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+
+.produto p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: var(--marrom-claro);
+    line-height: 1.5;
+}
+
+.produto strong {
+    color: var(--dourado);
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   ADICIONAL
+========================= */
+
+.adicional {
+    max-width: 700px;
+    margin: 35px auto 0;
+    padding: 20px 25px;
+
+    border: 1px solid var(--bege-escuro);
+    background: white;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.adicional > span {
+    color: var(--dourado);
+    font-size: 25px;
+}
+
+.adicional div {
+    flex: 1;
+}
+
+.adicional strong {
+    font-size: 14px;
+}
+
+.adicional p {
+    font-family: Arial, sans-serif;
+    color: var(--marrom-claro);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.adicional b {
+    color: var(--dourado);
+    white-space: nowrap;
+}
+
+
+/* =========================
+   PÃES
+========================= */
+
+.paes {
+    max-width: 700px;
+    margin: 35px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    color: var(--marrom-claro);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.paes span {
+    font-size: 25px;
+}
+
+.paes strong {
+    color: var(--marrom);
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    padding: 100px 20px;
+    text-align: center;
+    background: white;
+}
+
+.sobre-conteudo {
+    max-width: 700px;
+    margin: auto;
+}
+
+.sobre h2 {
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.sobre h2 span {
+    color: var(--dourado);
+}
+
+.sobre p:last-child {
+    color: var(--marrom-claro);
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   EVENTOS FINAL
+========================= */
+
+.eventos-final {
+    padding: 80px 20px;
+    background: var(--bege);
+    text-align: center;
+}
+
+.evento-card {
+    max-width: 700px;
+    margin: auto;
+}
+
+.icone-grande {
+    font-size: 45px;
+}
+
+.evento-card h2 {
+    font-size: 38px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.evento-card p {
+    font-family: Arial, sans-serif;
+    color: var(--marrom-claro);
+    line-height: 1.7;
+}
+
+.evento-card button {
+    margin-top: 25px;
+    padding: 14px 28px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: var(--marrom);
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.evento-card button:hover {
+    background: var(--dourado);
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.contato > h2 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 45px;
+}
+
+.contato-grid {
+    max-width: 950px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contato-card {
+    padding: 35px 20px;
+
+    background: var(--bege-claro);
+    border: 1px solid #e5dacc;
+}
+
+.contato-card span {
+    font-size: 30px;
+}
+
+.contato-card h3 {
+    margin: 15px 0 8px;
+    font-weight: normal;
+}
+
+.contato-card p {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: var(--marrom-claro);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 50px 20px;
+    background: var(--marrom);
+    color: white;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 25px;
+    letter-spacing: 4px;
+}
+
+.footer-logo span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 7px;
+    color: #d9c09d;
+    margin-top: 5px;
+}
+
+footer p {
+    color: #d8cec3;
+    margin: 18px 0;
+    font-style: italic;
+}
+
+.linha-footer {
+    max-width: 200px;
+    height: 1px;
+    background: #806f60;
+    margin: 20px auto;
+}
+
+footer small {
+    color: #bdb0a3;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    .topo {
+        padding: 12px 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .botao-topo {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 580px;
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 58px;
+    }
+
+    .hero h2 span {
+        font-size: 28px;
+        letter-spacing: 7px;
+    }
+
+    .frase {
+        font-size: 21px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 38px;
+    }
+
+    .categoria {
+        padding: 55px 6%;
+    }
+
+    .categoria-titulo h2 {
+        font-size: 27px;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .produto {
+        min-height: 85px;
+    }
+
+    .produto h3 {
+        font-size: 16px;
+    }
+
+    .produto strong {
+        font-size: 12px;
+    }
+
+    .adicional {
+        padding: 18px;
+    }
+
+    .sobre h2 {
+        font-size: 35px;
+    }
+
+    .evento-card h2 {
+        font-size: 31px;
+    }
+
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 400px) {
+
+    .logo h1 {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .logo-simbolo {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .botao-topo {
+        display: none;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+    }
+
+    .categoria-titulo {
+        gap: 10px;
+    }
+
+    .categoria-titulo .icone {
+        font-size: 30px;
+    }
+
+    .produto {
+        gap: 10px;
+    }
+
+    .produto strong {
+        font-size: 11px;
+    }
+
+}
