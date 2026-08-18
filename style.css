@@ -1,768 +1,1292 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --branco: #ffffff;
-    --bege: #f4eee5;
-    --bege-claro: #faf7f2;
-    --bege-escuro: #d8c8b5;
-    --marrom: #4a3b32;
-    --marrom-claro: #806f60;
-    --dourado: #b89568;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: var(--branco);
-    color: var(--marrom);
-}
-
-
-/* =========================
-   TOPO
-========================= */
-
-.topo {
-    min-height: 85px;
-    padding: 15px 7%;
-    background: rgba(255, 255, 255, 0.97);
-    border-bottom: 1px solid #e8dfd4;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-simbolo {
-    width: 48px;
-    height: 48px;
-
-    border: 2px solid var(--dourado);
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 25px;
-    color: var(--dourado);
-}
-
-.logo h1 {
-    font-size: 20px;
-    letter-spacing: 3px;
-    font-weight: normal;
-}
-
-.logo span {
-    display: block;
-    text-align: center;
-    font-size: 10px;
-    letter-spacing: 5px;
-    color: var(--dourado);
-    margin-top: 3px;
-}
-
-nav {
-    display: flex;
-    gap: 30px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--marrom);
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: var(--dourado);
-}
-
-.botao-topo {
-    text-decoration: none;
-    color: white;
-    background: var(--marrom);
-    padding: 12px 22px;
-    border-radius: 30px;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.botao-topo:hover {
-    background: var(--dourado);
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 650px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 80px 20px;
-
-    background:
-        linear-gradient(
-            rgba(250, 247, 242, 0.85),
-            rgba(255, 255, 255, 0.95)
-        );
-}
-
-.hero-conteudo {
-    max-width: 800px;
-}
-
-.mini-titulo {
-    color: var(--dourado);
-    letter-spacing: 4px;
-    font-size: 13px;
-    margin-bottom: 20px;
-}
-
-.hero h2 {
-    font-size: clamp(55px, 9vw, 95px);
-    font-weight: normal;
-    line-height: 0.95;
-}
-
-.hero h2 span {
-    display: block;
-    font-size: 0.55em;
-    letter-spacing: 12px;
-    color: var(--dourado);
-    margin-top: 15px;
-}
-
-.linha-decorativa {
-    margin: 25px 0;
-    color: var(--dourado);
-    font-size: 25px;
-}
-
-.frase {
-    font-size: 26px;
-    font-style: italic;
-    line-height: 1.4;
-}
-
-.hero-texto {
-    max-width: 550px;
-    margin: 25px auto;
-    color: var(--marrom-claro);
-    line-height: 1.7;
-    font-family: Arial, sans-serif;
-}
-
-.botao-principal {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 15px 30px;
-
-    background: var(--marrom);
-    color: white;
-
-    text-decoration: none;
-    border-radius: 30px;
-
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.botao-principal:hover {
-    background: var(--dourado);
-    transform: translateY(-3px);
-}
-
-
-/* =========================
-   EVENTOS
-========================= */
-
-.eventos {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 45px 30px;
-
-    text-align: center;
-
-    background: var(--bege-claro);
-    border: 1px solid var(--bege-escuro);
-}
-
-.decoracao {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-.eventos h2 {
-    font-size: 30px;
-    font-weight: normal;
-    margin-bottom: 20px;
-}
-
-.eventos p {
-    color: var(--marrom-claro);
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
-}
-
-
-/* =========================
-   TÍTULOS
-========================= */
-
-.titulo-secao {
-    text-align: center;
-    padding: 80px 20px 45px;
-}
-
-.titulo-secao span {
-    color: var(--dourado);
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    letter-spacing: 4px;
-}
-
-.titulo-secao h2 {
-    font-size: 48px;
-    font-weight: normal;
-    margin: 12px 0;
-}
-
-.titulo-secao p {
-    color: var(--marrom-claro);
-    font-family: Arial, sans-serif;
-}
-
-
-/* =========================
-   CATEGORIAS
-========================= */
-
-.categoria {
-    padding: 70px 8%;
-}
-
-.fundo-bege {
-    background: var(--bege-claro);
-}
-
-.categoria-titulo {
-    max-width: 1000px;
-    margin: 0 auto 35px;
-
-    display: flex;
-    align-items: center;
-    gap: 18px;
-
-    border-bottom: 1px solid var(--bege-escuro);
-    padding-bottom: 20px;
-}
-
-.categoria-titulo .icone {
-    font-size: 38px;
-}
-
-.categoria-titulo p {
-    color: var(--dourado);
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 3px;
-    margin-bottom: 5px;
-}
-
-.categoria-titulo h2 {
-    font-size: 34px;
-    font-weight: normal;
-}
-
-
-/* =========================
-   PRODUTOS
-========================= */
-
-.produtos {
-    max-width: 1000px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 45px;
-}
-
-.produto {
-    min-height: 95px;
-    padding: 20px 0;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-
-    border-bottom: 1px dashed #d9cec1;
-}
-
-.produto h3 {
-    font-size: 18px;
-    font-weight: normal;
-    margin-bottom: 7px;
-}
-
-.produto p {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    color: var(--marrom-claro);
-    line-height: 1.5;
-}
-
-.produto strong {
-    color: var(--dourado);
-    white-space: nowrap;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-
-/* =========================
-   IMAGENS DOS PRODUTOS
-========================= */
-
-.produto-com-imagem {
-    gap: 15px;
-}
-
-.produto-com-imagem img {
-    width: 90px;
-    height: 90px;
-
-    object-fit: cover;
-
-    border-radius: 12px;
-
-    flex-shrink: 0;
-    display: block;
-}
-
-.produto-com-imagem .produto-info {
-    flex: 1;
-}
-
-
-/* =========================
-   ADICIONAL
-========================= */
-
-.adicional {
-    max-width: 700px;
-    margin: 35px auto 0;
-    padding: 20px 25px;
-
-    border: 1px solid var(--bege-escuro);
-    background: white;
-
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.adicional > span {
-    color: var(--dourado);
-    font-size: 25px;
-}
-
-.adicional div {
-    flex: 1;
-}
-
-.adicional strong {
-    font-size: 14px;
-}
-
-.adicional p {
-    font-family: Arial, sans-serif;
-    color: var(--marrom-claro);
-    font-size: 13px;
-    margin-top: 4px;
-}
-
-.adicional b {
-    color: var(--dourado);
-    white-space: nowrap;
-}
-
-
-/* =========================
-   PÃES
-========================= */
-
-.paes {
-    max-width: 700px;
-    margin: 35px auto 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-
-    color: var(--marrom-claro);
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-}
-
-.paes span {
-    font-size: 25px;
-}
-
-.paes strong {
-    color: var(--marrom);
-}
-
-
-/* =========================
-   SOBRE
-========================= */
-
-.sobre {
-    padding: 100px 20px;
-    text-align: center;
-    background: white;
-}
-
-.sobre-conteudo {
-    max-width: 700px;
-    margin: auto;
-}
-
-.sobre h2 {
-    font-size: 45px;
-    font-weight: normal;
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
-
-.sobre h2 span {
-    color: var(--dourado);
-}
-
-.sobre p:last-child {
-    color: var(--marrom-claro);
-    font-family: Arial, sans-serif;
-    line-height: 1.8;
-}
-
-
-/* =========================
-   EVENTOS FINAL
-========================= */
-
-.eventos-final {
-    padding: 80px 20px;
-    background: var(--bege);
-    text-align: center;
-}
-
-.evento-card {
-    max-width: 700px;
-    margin: auto;
-}
-
-.icone-grande {
-    font-size: 45px;
-}
-
-.evento-card h2 {
-    font-size: 38px;
-    font-weight: normal;
-    margin: 20px 0;
-}
-
-.evento-card p {
-    font-family: Arial, sans-serif;
-    color: var(--marrom-claro);
-    line-height: 1.7;
-}
-
-.evento-card button {
-    margin-top: 25px;
-    padding: 14px 28px;
-
-    border: none;
-    border-radius: 30px;
-
-    background: var(--marrom);
-    color: white;
-
-    cursor: pointer;
-
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.evento-card button:hover {
-    background: var(--dourado);
-}
-
-
-/* =========================
-   CONTATO
-========================= */
-
-.contato {
-    padding: 90px 8%;
-    text-align: center;
-}
-
-.contato > h2 {
-    font-size: 42px;
-    font-weight: normal;
-    margin-bottom: 45px;
-}
-
-.contato-grid {
-    max-width: 950px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.contato-card {
-    padding: 35px 20px;
-
-    background: var(--bege-claro);
-    border: 1px solid #e5dacc;
-}
-
-.contato-card span {
-    font-size: 30px;
-}
-
-.contato-card h3 {
-    margin: 15px 0 8px;
-    font-weight: normal;
-}
-
-.contato-card p {
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    color: var(--marrom-claro);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    padding: 50px 20px;
-    background: var(--marrom);
-    color: white;
-    text-align: center;
-}
-
-.footer-logo {
-    font-size: 25px;
-    letter-spacing: 4px;
-}
-
-.footer-logo span {
-    display: block;
-    font-size: 11px;
-    letter-spacing: 7px;
-    color: #d9c09d;
-    margin-top: 5px;
-}
-
-footer p {
-    color: #d8cec3;
-    margin: 18px 0;
-    font-style: italic;
-}
-
-.linha-footer {
-    max-width: 200px;
-    height: 1px;
-    background: #806f60;
-    margin: 20px auto;
-}
-
-footer small {
-    color: #bdb0a3;
-    font-family: Arial, sans-serif;
-}
-
-
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 700px) {
-
-    .topo {
-        padding: 12px 5%;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .botao-topo {
-        padding: 10px 15px;
-        font-size: 12px;
-    }
-
-    .hero {
-        min-height: 580px;
-        padding: 60px 20px;
-    }
-
-    .hero h2 {
-        font-size: 58px;
-    }
-
-    .hero h2 span {
-        font-size: 28px;
-        letter-spacing: 7px;
-    }
-
-    .frase {
-        font-size: 21px;
-    }
-
-    .titulo-secao h2 {
-        font-size: 38px;
-    }
-
-    .categoria {
-        padding: 55px 6%;
-    }
-
-    .categoria-titulo h2 {
-        font-size: 27px;
-    }
-
-    .produtos {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .produto {
-        min-height: 85px;
-    }
-
-    .produto h3 {
-        font-size: 16px;
-    }
-
-    .produto strong {
-        font-size: 12px;
-    }
-
-
-    /* IMAGENS NO CELULAR */
-
-    .produto-com-imagem img {
-        width: 75px;
-        height: 75px;
-    }
-
-    .produto-com-imagem {
-        gap: 12px;
-    }
-
-
-    .adicional {
-        padding: 18px;
-    }
-
-    .sobre h2 {
-        font-size: 35px;
-    }
-
-    .evento-card h2 {
-        font-size: 31px;
-    }
-
-    .contato-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* =========================
-   CELULARES PEQUENOS
-========================= */
-
-@media (max-width: 400px) {
-
-    .logo h1 {
-        font-size: 16px;
-        letter-spacing: 2px;
-    }
-
-    .logo-simbolo {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-
-    .botao-topo {
-        display: none;
-    }
-
-    .hero h2 {
-        font-size: 48px;
-    }
-
-    .categoria-titulo {
-        gap: 10px;
-    }
-
-    .categoria-titulo .icone {
-        font-size: 30px;
-    }
-
-    .produto {
-        gap: 10px;
-    }
-
-    .produto strong {
-        font-size: 11px;
-    }
-
-    .produto-com-imagem img {
-        width: 65px;
-        height: 65px;
-    }
-
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ma Maison Café</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         TOPO
+    ========================== -->
+
+    <header class="topo">
+
+        <div class="logo">
+
+            <div class="logo-simbolo">M</div>
+
+            <div>
+                <h1>MA MAISON</h1>
+                <span>CAFÉ</span>
+            </div>
+
+        </div>
+
+        <a href="#cardapio" class="botao-topo">
+            Ver Cardápio
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         INÍCIO
+    ========================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-conteudo">
+
+            <p class="mini-titulo">
+                SEJA BEM-VINDO À
+            </p>
+
+            <h2>
+                Ma Maison
+                <span>Café</span>
+            </h2>
+
+            <div class="linha-decorativa">
+                ♡
+            </div>
+
+            <p class="frase">
+                Um café com a alma francesa<br>
+                e sabor de lar!
+            </p>
+
+            <a href="#cardapio" class="botao-principal">
+                Conheça nosso cardápio
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EVENTOS
+    ========================== -->
+
+    <section class="eventos">
+
+        <div class="decoracao">
+            ☕
+        </div>
+
+        <h2>
+            Eventos e Confraternizações
+        </h2>
+
+        <p>
+            Alugamos o espaço para eventos e confraternizações.
+        </p>
+
+        <p>
+            Temos serviços de buffet e decoração à parte.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         CARDÁPIO
+    ========================== -->
+
+    <main id="cardapio">
+
+        <div class="titulo-secao">
+
+            <span>
+                MA MAISON CAFÉ
+            </span>
+
+            <h2>
+                Nosso Cardápio
+            </h2>
+
+            <p>
+                Simples nos detalhes, perfeito no sabor.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             BOLOS E DOCES
+        ========================== -->
+
+        <section class="categoria">
+
+            <div class="categoria-titulo">
+
+                <span class="icone">
+                    🍰
+                </span>
+
+                <div>
+
+                    <p>
+                        DELICIOSOS
+                    </p>
+
+                    <h2>
+                        Bolos & Doces
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="produtos">
+
+                <!-- BOLOS -->
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Bolos diversos
+                        </h3>
+
+                        <p>
+                            Verificar sabores disponíveis (a fatia)
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <!-- FOLHEADOS -->
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Folheado com Nutella e morango
+                        </h3>
+
+                        <p>
+                            Folheado com leite ninho e morango
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <!-- PANNA COTTA -->
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Panna Cotta
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <!-- TORTA -->
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Torta
+                        </h3>
+
+                        <p>
+                            Verificar sabor
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <!-- PÃO DE MEL -->
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Pão de mel
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <!-- TORTELETTE -->
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Tortelette
+                        </h3>
+
+                        <p>
+                            Verificar sabor
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <!-- BROWNIE -->
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Brownie
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BEBIDAS QUENTES
+        ========================== -->
+
+        <section class="categoria fundo-bege">
+
+            <div class="categoria-titulo">
+
+                <span class="icone">
+                    ☕
+                </span>
+
+                <div>
+
+                    <p>
+                        PARA AQUECER
+                    </p>
+
+                    <h2>
+                        Bebidas Quentes
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="produtos">
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Café Expresso
+                        </h3>
+
+                        <p>
+                            Curto duplo / Americano
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Capuccino
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Café com leite
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Nescau
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Chocolate quente da casa
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Capuccino da casa
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="adicional">
+
+                <span>
+                    +
+                </span>
+
+                <div>
+
+                    <strong>
+                        Adicional
+                    </strong>
+
+                    <p>
+                        Chantilly ou borda de Nutella
+                    </p>
+
+                </div>
+
+                <b>
+                    R$ ______
+                </b>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BEBIDAS GELADAS
+        ========================== -->
+
+        <section class="categoria">
+
+            <div class="categoria-titulo">
+
+                <span class="icone">
+                    🧊
+                </span>
+
+                <div>
+
+                    <p>
+                        REFRESCANTES
+                    </p>
+
+                    <h2>
+                        Bebidas Geladas
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="produtos">
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Sucos
+                        </h3>
+
+                        <p>
+                            Abacaxi com hortelã / Maracujá /
+                            Laranja / Água ou leite
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Água com gás
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Água sem gás
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Schweppes
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Fanta Laranja
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Guaraná
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Coca-Cola KS
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Vidro
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Capuccino gelado
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SALGADOS ASSADOS
+        ========================== -->
+
+        <section class="categoria fundo-bege">
+
+            <div class="categoria-titulo">
+
+                <span class="icone">
+                    🥐
+                </span>
+
+                <div>
+
+                    <p>
+                        FRESQUINHOS
+                    </p>
+
+                    <h2>
+                        Salgados Assados
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="produtos">
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Quiche
+                        </h3>
+
+                        <p>
+                            Verificar sabor
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Enroladinho de leite condensado e coco
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Frango com catupiry
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Empada
+                        </h3>
+
+                        <p>
+                            Consultar sabor
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Assado de presunto e queijo
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Cachorro quente
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Folheado de frango
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SALGADOS FRITOS
+        ========================== -->
+
+        <section class="categoria">
+
+            <div class="categoria-titulo">
+
+                <span class="icone">
+                    🍟
+                </span>
+
+                <div>
+
+                    <p>
+                        QUENTINHOS
+                    </p>
+
+                    <h2>
+                        Salgados Fritos
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="produtos">
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Coxinha de carne
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Coxinha de frango com catupiry
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Coxinha de costela
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Pastel de vento
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LANCHES NA CHAPA
+        ========================== -->
+
+        <section class="categoria fundo-bege">
+
+            <div class="categoria-titulo">
+
+                <span class="icone">
+                    🥪
+                </span>
+
+                <div>
+
+                    <p>
+                        FEITOS NA HORA
+                    </p>
+
+                    <h2>
+                        Lanches na Chapa
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="produtos">
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Omelete da casa
+                        </h3>
+
+                        <p>
+                            Consultar sabor
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Peito de peru com queijo,
+                            mussarela e tomate
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Lanche de filé mignon
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Mortadela com mussarela
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Misto quente
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Pão com ovo
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Crepioca
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+
+                <div class="produto">
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Tapioca
+                        </h3>
+
+                    </div>
+
+                    <strong>
+                        R$ ______
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="paes">
+
+                <span>
+                    🥖
+                </span>
+
+                <p>
+                    Opções de
+                    <strong>pão francês</strong>
+                    e
+                    <strong>pão integral</strong>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         SOBRE
+    ========================== -->
+
+    <section class="sobre" id="sobre">
+
+        <div class="sobre-conteudo">
+
+            <p class="mini-titulo">
+                MA MAISON CAFÉ
+            </p>
+
+            <h2>
+                Momentos especiais
+                <span>começam aqui.</span>
+            </h2>
+
+            <p>
+                Um espaço pensado para você aproveitar cada momento
+                com sabores especiais, cafés preparados com carinho
+                e opções deliciosas para todos os gostos.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EVENTOS FINAL
+    ========================== -->
+
+    <section class="eventos-final">
+
+        <div class="evento-card">
+
+            <span class="icone-grande">
+                ☕
+            </span>
+
+            <h2>
+                Eventos & Confraternizações
+            </h2>
+
+            <p>
+                Alugamos o espaço para eventos e confraternizações.
+            </p>
+
+            <p>
+                Temos serviços de buffet e decoração à parte.
+            </p>
+
+            <button onclick="mostrarMensagem()">
+                Tenho interesse
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+    ========================== -->
+
+    <section class="contato" id="contato">
+
+        <p class="mini-titulo">
+            FALE CONOSCO
+        </p>
+
+        <h2>
+            Entre em contato
+        </h2>
+
+
+        <div class="contato-grid">
+
+            <div class="contato-card">
+
+                <span>
+                    📍
+                </span>
+
+                <h3>
+                    Localização
+                </h3>
+
+                <p>
+                    Av. Parigot de Souza, 2373
+                </p>
+
+            </div>
+
+
+            <div class="contato-card">
+
+                <span>
+                    📱
+                </span>
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+                <p>
+                    Seu número aqui
+                </p>
+
+            </div>
+
+
+            <div class="contato-card">
+
+                <span>
+                    🕐
+                </span>
+
+                <h3>
+                    Funcionamento
+                </h3>
+
+                <p>
+                    Consulte nossos horários
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            MA MAISON
+
+            <span>
+                CAFÉ
+            </span>
+
+        </div>
+
+        <p>
+            Um café com a alma francesa e sabor de lar!
+        </p>
+
+        <div class="linha-footer"></div>
+
+        <small>
+            © 2026 Ma Maison Café — Todos os direitos reservados.
+        </small>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function mostrarMensagem() {
+
+            alert(
+                "Obrigado pelo interesse! Entre em contato com a Ma Maison Café para saber mais sobre nossos eventos e confraternizações."
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
